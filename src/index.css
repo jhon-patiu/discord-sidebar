@@ -32,15 +32,23 @@
     }
 
     .top-nav {
-        @apply w-full h-20 mx-2 flex flex-row items-center justify-evenly  shadow-md;
+        @apply w-full h-20 mx-2 flex flex-col md:flex-row items-center justify-evenly shadow-md lg:justify-between;
+    }
+
+    .top-nav__left {
+        @apply ml-12 flex-1;
+    }
+
+    .top-nav__right {
+        @apply px-10 flex flex-1 justify-end;
     }
 
     .top-nav__title {
-        @apply font-mono text-gray-900 dark:text-gray-100 text-xl font-bold tracking-wider;
+        @apply font-mono text-gray-800 dark:text-gray-100 text-xl font-bold tracking-wider ml-1;
     }
 
     .hashtag-icon {
-        @apply dark:text-gray-200 text-gray-900;
+        @apply dark:text-gray-200 text-gray-800;
     }
 
     .theme-icon {
@@ -48,10 +56,10 @@
     }
 
     .search-bar {
-        @apply w-32 min-w-0 md:w-1/5 flex items-center justify-start 
+        @apply w-32 md:w-60 min-w-0 flex items-center justify-start 
         bg-gray-300 text-gray-400 dark:bg-gray-600
          dark:text-gray-400
-         px-2 h-9 ml-0 mr-0 
+         px-2 h-9 mx-4 
          rounded-md shadow-md
          transition duration-300 ease-in-out;
     }

@@ -13,15 +13,18 @@ import React from "react";
 function TopNav() {
     return (
         <div className="top-nav">
-            <div className="flex">
-                <HashtagIcon />
-                <Title />
-            </div>
-
-            <ThemeIcon />
-            <SearchBar />
-            <Avatar />
-            <BellIcon />
+            <span className="top-nav__left">
+                <div className="flex">
+                    <HashtagIcon />
+                    <Title />
+                </div>
+            </span>
+            <span className="top-nav__right">
+                <ThemeIcon />
+                <SearchBar />
+                <Avatar />
+                <BellIcon />
+            </span>
         </div>
     );
 }
@@ -33,9 +36,9 @@ const ThemeIcon = () => {
     return (
         <span onClick={handleTheme}>
             {darkTheme ? (
-                <FaSun size="24" className="theme-icon" />
+                <FaSun size="28" className="theme-icon" />
             ) : (
-                <FaMoon size="24" className="theme-icon" />
+                <FaMoon size="28" className="theme-icon" />
             )}
         </span>
     );
